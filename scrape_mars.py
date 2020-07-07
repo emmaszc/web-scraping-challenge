@@ -1,6 +1,6 @@
 import os
 from bs4 import BeautifulSoup
-import requests
+# import requests
 from splinter import Browser
 import pandas as pd
 import time
@@ -36,7 +36,7 @@ def scrape_info():
     image_link = soup.find('div', class_='carousel_items')
     image_urls = image_link.article["style"].split()[1]
     featured_image_url = image_urls.replace("url('", base_url).replace("');","")
-    response = requests.get(featured_image_url, stream=True)
+    # response = requests.get(featured_image_url, stream=True)
     # with open('featured_img.png', 'wb') as out_file:
     #     shutil.copyfileobj(response.raw, out_file)
     # Mars Facts
